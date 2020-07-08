@@ -1,20 +1,35 @@
-/****************************** COLOR SCHEME - BEGIN ******************************/
-:root {
-	--pure-black: #000000;  /* color: var(--pure-black) */
-	--pure-white: #ffffff;  /* color: var(--pure-white) */
-}
-/****************************** COLOR SCHEME - END ******************************/
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+#app {
+	margin: auto;
+	display: flex;
+}
 
+.cell {
+	margin-left: 10px;
+	position: relative;
+}
 
+.cell > .up  {
+	position: absolute;
+	top: 0;
+}
 
+.cell > .down {
+	position: absolute;
+	bottom: 0;
+}
 
+.semicolon > .up, 
+.semicolon > .down {
+	color: #ffffff;
+	background-color: #000000;
+	background-clip: content-box;
+}
 
 
 

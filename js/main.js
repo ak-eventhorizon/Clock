@@ -1,5 +1,5 @@
 'use strict';
 
-import { clock } from "./modules/clock.js";
+import { createClock } from "./modules/clock.js";
 
-clock();
+createClock('app','180px');

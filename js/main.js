@@ -1,5 +1,5 @@
 'use strict';
 
-import { test } from "./modules/module1.js";
+import { clock } from "./modules/clock.js";
 
-test();
+clock();

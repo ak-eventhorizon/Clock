@@ -10,8 +10,11 @@
 }
 
 .cell {
-	margin-left: 10px;
 	position: relative;
+}
+
+.cell:nth-child(3n-1) {
+	margin-left: 0.5rem; /* 3,5 и 8 элементы .cell*/
 }
 
 .cell > .up  {
@@ -24,30 +27,91 @@
 	bottom: 0;
 }
 
-.semicolon > .up, 
-.semicolon > .down {
-	color: #ffffff;
+.up, .down {
+	border-style: solid;
+}
+
+.semicolon {
 	background-color: #000000;
+	color: #ffffff;
 	background-clip: content-box;
 }
 
+/* for JS el.classList.toggle('blink') */
+#semicolon0.blink {
+	background-color: #ffffff;
+}
 
+/* ************************* NUMBERS PATTERNS ************************* */
 
-/****************************** @MEDIA - BEGIN ******************************/
-/*	typical checkpoints - DELETE unused		*/
+.zero .up {
+	border-bottom: none;
+}
 
-/* Extra small devices (phones, <<<--600px and down) */
-@media only screen and (max-width: 600px) {} 
+.zero .down {
+	border-top: none;
+}
 
-/* Small devices (portrait tablets and large phones, 601px-->>> and up) */
-@media only screen and (min-width: 601px) {} 
+.one .up {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
 
-/* Medium devices (landscape tablets, 768px-->>> and up) */
-@media only screen and (min-width: 768px) {} 
+.one .down {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
 
-/* Large devices (laptops/desktops, 992px-->>> and up) */
-@media only screen and (min-width: 992px) {} 
+.two .up {
+	border-left: none;
+}
 
-/* Extra large devices (large laptops and desktops, 1200px-->>> and up) */
-@media only screen and (min-width: 1200px) {}
-/****************************** @MEDIA - END ******************************/
+.two .down {
+	border-right: none;
+}
+
+.three .up {
+	border-left: none;
+}
+
+.three .down {
+	border-left: none;
+}
+
+.four .up {
+	border-top: none;
+}
+
+.four .down {
+	border-bottom: none;
+	border-left: none;
+}
+
+.five .up {
+	border-right: none;
+}
+
+.five .down {
+	border-left: none;
+}
+
+.six .up {
+	border-right: none;
+}
+
+.seven .up {
+	border-bottom: none;
+	border-left: none;
+}
+
+.seven .down {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+.nine .down {
+	border-left: none;
+}

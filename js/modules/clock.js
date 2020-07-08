@@ -53,13 +53,13 @@ function createClock(elementID, elementHeight){
         up.classList = 'up';
         up.style.width = `${clockElement.clientHeight * (3/5)}px`;
         up.style.height = `${clockElement.clientHeight * (3/5)}px`;
-        up.style.border = `${clockElement.clientHeight * (1/5)}px solid`; // толщина цифр 1/5
+        up.style.borderWidth = `${clockElement.clientHeight * (1/5)}px`; // толщина границы 1/5
 
         let down = document.createElement('div');
         down.classList = 'down';
         down.style.width = `${clockElement.clientHeight * (3/5)}px`;
         down.style.height = `${clockElement.clientHeight * (3/5)}px`;
-        down.style.border = `${clockElement.clientHeight * (1/5)}px solid`;
+        down.style.borderWidth = `${clockElement.clientHeight * (1/5)}px`;
 
 
         cell.appendChild(up);

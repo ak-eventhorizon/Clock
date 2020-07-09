@@ -106,8 +106,6 @@ function createClock(elementID, elementHeight){
 
     setInterval(refreshView, 1000);
 
-    // refreshView();
-
 }
 
 

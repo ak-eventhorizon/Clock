@@ -1,6 +1,7 @@
 'use strict';
 
 function createLayout(elementID, elementHeight){
+
     let clockElement = document.getElementById(elementID);
     clockElement.style.height = elementHeight;
     clockElement.style.width = 'fit-content';
@@ -57,10 +58,9 @@ function createLayout(elementID, elementHeight){
         down.style.height = `${clockElement.clientHeight * (3/5)}px`;
         down.style.borderWidth = `${clockElement.clientHeight * (1/5)}px`;
 
-
         cell.appendChild(up);
         cell.appendChild(down);
-
+        
         clockElement.appendChild(cell);
     }
 }
@@ -96,6 +96,10 @@ function refreshView(){
     elemSec0.classList = `cell ${cellClass[+currentTimeObj.s0]}`;
     let elemSec1 = document.getElementById('sec1');
     elemSec1.classList = `cell ${cellClass[+currentTimeObj.s1]}`;
+
+    // semicolon blinking:
+    let semicolon = document.getElementById('semicolon1');
+    semicolon.classList.toggle('blink');
 }
 
 
@@ -103,9 +107,7 @@ function refreshView(){
 function createClock(elementID, elementHeight){
 
     createLayout(elementID, elementHeight);
-
     setInterval(refreshView, 1000);
-
 }
 
 

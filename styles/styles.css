@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 }
 
+body {
+	display: grid;
+	height: 85vh;
+}
+
 #app {
 	margin: auto;
 	display: flex;
@@ -31,15 +36,17 @@
 	border-style: solid;
 }
 
-.semicolon {
-	background-color: #000000;
+.semicolon > .up,
+.semicolon > .down {
 	color: #ffffff;
+	background-image: url(/img/blackSquare.png);
 	background-clip: content-box;
 }
 
-/* for JS el.classList.toggle('blink') */
-#semicolon0.blink {
-	background-color: #ffffff;
+/* for JS semicolon blinking */
+#semicolon1.blink > .up,
+#semicolon1.blink > .down {
+	background-image: none;
 }
 
 /* ************************* NUMBERS PATTERNS ************************* */

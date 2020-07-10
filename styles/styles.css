@@ -39,7 +39,7 @@ body {
 .semicolon > .up,
 .semicolon > .down {
 	color: #ffffff;
-	background-image: url(/img/blackSquare.png);
+	background-image: url(../img/blackSquare.png);
 	background-clip: content-box;
 }
 

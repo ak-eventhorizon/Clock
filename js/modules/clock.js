@@ -8,38 +8,33 @@ function createLayout(elementID, elementHeight){
     
     for (let i = 0; i < 8; i++) {
         let cell = document.createElement('div');
+        cell.classList = 'cell';
 
         switch (i) {
             case 0:
-                cell.classList = 'cell';
                 cell.id = 'hour0';
                 break;
             case 1:
-                cell.classList = 'cell';
                 cell.id = 'hour1';
                 break;
             case 2:
-                cell.classList = 'cell semicolon';
+                cell.classList.toggle('semicolon');
                 cell.id = 'semicolon0';
                 break;
             case 3:
-                cell.classList = 'cell';
                 cell.id = 'min0';
                 break;
             case 4:
-                cell.classList = 'cell';
                 cell.id = 'min1';
                 break;
             case 5:
-                cell.classList = 'cell semicolon';
+                cell.classList.toggle('semicolon');
                 cell.id = 'semicolon1';
                 break;
             case 6:
-                cell.classList = 'cell';
                 cell.id = 'sec0';
                 break;
             case 7:
-                cell.classList = 'cell';
                 cell.id = 'sec1';
                 break;
         }
